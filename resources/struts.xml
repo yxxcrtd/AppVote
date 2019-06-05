@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- 是否为struts开发模式 -->
+	<constant name="struts.devMode" value="false" />
+	<!-- 默认的UI template主题 -->
+	<constant name="struts.ui.theme" value="simple" />
+	<!-- 默认的国际化地区信息 -->
+	<constant name="struts.locale" value="zh_CN" />
+	<!-- 国际化信息内码 -->
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<!-- action的后缀 -->
+	<constant name="struts.action.extension" value="action,do,webwork" />
+	<!-- 加载附加的国际化属性文件（不包含.properties后缀）。可以增加多个properties文件的名称，使用逗号或者空格分割 -->
+	<constant name="struts.custom.i18n.resources" value="properties/struts-messsages" />
+	<!-- ObjectFactory接口 -->
+	<constant name="struts.objectFactory" value="spring" />
+	<!-- 指定当使用SpringObjectFactory时的自动装配逻辑.合法值包括: name, type, auto, 和 constructor (缺省为 name ) -->
+	<constant name="struts.objectFactory.spring.autoWire" value="name" />
+	<!-- 允许动态方法调用 -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<!-- 是否国际化信息自动加载 -->
+	<constant name="struts.i18n.reload" value="true" />
+	<!-- 是否自动加载xml配置(true,false) -->
+	<constant name="struts.configuration.xml.reload" value="false" />
+	<!-- 是否spring应该使用自身的cache -->
+	<constant name="struts.objectFactory.spring.useClassCache" value="true" />
+	<constant name="struts.freemarker.templatesCache" value="false" />
+	<!-- 是否struts过滤器中提供的静态内容应该被浏览器缓存在头部属性中 -->
+	<constant name="struts.serve.static.browserCache" value="true" />
+	<!-- 是否struts过滤器应该提供静态内容 -->
+	<constant name="struts.serve.static" value="true" />
+	<!-- 是否不缓存XSLT模版 -->
+	<constant name="struts.xslt.nocache" value="false" />
+	<!-- 设置动态代理为true -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+
+
+	<package name="authorization" extends="struts-default" namespace="/">
+		<interceptors>
+			<!-- 定义一个登录验证拦截器 -->
+			<interceptor name="authorization" class="com.chinaedustar.app.common.AuthorizationInterceptor" />
+			<!-- 登录验证拦截器栈 -->
+			<interceptor-stack name="authorizationstack">
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+				<interceptor-ref name="authorization"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<!-- 全局配置 -->
+		<global-results>
+			<result name="login" type="chain">
+				<param name="actionName">login</param>
+				<param name="namespace">/</param>
+			</result>
+		</global-results>
+	</package>
+
+	<package name="login" extends="struts-default" namespace="/">
+		<action name="login" class="com.chinaedustar.app.common.LoginAction" method="login"></action>
+		<action name="verify" class="com.chinaedustar.app.common.LoginAction" method="verify"></action>
+		<action name="logout" class="com.chinaedustar.app.common.LoginAction" method="logout"></action>
+	</package>
+
+	<!-- 包含的struts文件 -->
+	<include file="struts/struts-vote.xml"></include>
+
+	<!-- 为外部调用的投票列表 -->
+	<package name="poll" extends="struts-default" namespace="/">
+		<action name="poll" class="com.chinaedustar.app.vote.action.PollAction" method="list">
+			<result name="success" type="freemarker">/WEB-INF/ftl/vote/PollList.ftl</result>
+			<result name="error" type="freemarker">/WEB-INF/ftl/vote/404.ftl</result>
+		</action>
+		<action name="poll_ajax" class="com.chinaedustar.app.vote.action.PollAction" method="list_ajax">
+			<result name="success" type="freemarker">/WEB-INF/ftl/vote/PollListAjax.ftl</result>
+		</action>
+	</package>
+</struts>
+

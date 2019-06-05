@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+  <package name="app-vote" extends="authorization" namespace="/">
+    <!-- 使用登录验证拦截器栈 -->
+    <default-interceptor-ref name="authorizationstack"></default-interceptor-ref>
+    <action name="vote" class="com.chinaedustar.app.vote.action.VoteAction" method="list">
+      <result name="success" type="freemarker">/WEB-INF/ftl/vote/VoteList.ftl</result>
+    </action>
+    <action name="vote_ajax" class="com.chinaedustar.app.vote.action.VoteAction" method="list_ajax">
+      <result name="success" type="freemarker">/WEB-INF/ftl/vote/VoteListAjax.ftl</result>
+    </action>
+    <action name="vote_edit" class="com.chinaedustar.app.vote.action.VoteAction" method="edit">
+      <result name="success" type="freemarker">/WEB-INF/ftl/vote/VoteEdit.ftl</result>
+      <result name="error" type="freemarker">/WEB-INF/ftl/vote/404.ftl</result>
+    </action>
+    <action name="vote_save" class="com.chinaedustar.app.vote.action.VoteAction" method="save">
+      <result name="input" type="freemarker">/WEB-INF/ftl/vote/VoteEdit.ftl</result>
+    </action>
+    <action name="vote_del" class="com.chinaedustar.app.vote.action.VoteAction" method="delete"></action>
+    <action name="vote_show" class="com.chinaedustar.app.vote.action.VoteAction" method="show">
+      <result name="success" type="freemarker">/WEB-INF/ftl/vote/VoteShow.ftl</result>
+      <result name="error" type="freemarker">/WEB-INF/ftl/vote/404.ftl</result>
+    </action>
+    <action name="voter" class="com.chinaedustar.app.vote.action.VoteAction" method="vote"></action>
+  </package>
+</struts>

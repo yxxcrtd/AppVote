@@ -1,0 +1,141 @@
+.fl{float:left;} .fr{float:right;}
+.backLink, .del, .ImgSlide a, .btArr, .trash,.zEdit{background:url(../images/eIcons.png) no-repeat;}
+.addItem, .grayBtn, .blueBtn, .createBtn, .partBtn, .viewBtn{background:url(../images/eBtns.png) no-repeat;}
+/*垃圾箱图标*/
+.trash,.zEdit{display:inline-block;margin:0 4px;width:11px;height:15px;overflow:hidden;background-position:-91px -155px;cursor:pointer;}
+.trash:hover{background-position:-109px -155px;}
+.zEdit{width:18px;height:18px;background-position:-102px -175px;}
+.zEdit:hover{background-position:-102px -196px;}
+/* 发起投票 */
+.indexT{height:34px;line-height:34px;border-bottom:1px solid #e1ebf2;box-shadow:inset 2px 0 0 #eaf2f6;background-color:#f3f8fb;font-size:18px;color:#01a3e3;text-indent:20px;font-weight:normal;}
+.ipt{float:left;padding:0 10px;width:224px;height:26px;line-height:26px;border:1px solid #ddd;box-shadow:1px 1px 2px #f0f0f0 inset;}
+.iptW584{width:584px;}
+.iptW435{width:435px;}
+.postWrap{padding-bottom:60px;background:#fff;}
+.postWrap .indexT{text-indent:0;}
+.backLink{display:inline-block;margin-right:14px;width:34px;height:34px;border-right:1px solid #e3e9ef;background-position:0 -44px;}
+.backLink:hover{background-position:-40px -44px;}
+.infoSection{padding:20px 0 0 50px;}
+.infoSection li{margin-top:20px;overflow:hidden;zoom:1;vertical-align:bottom;}
+.infoSection .infoT{float:left;display:inline-block;width:85px;line-height:28px;}
+.addItem{display:inline-block;margin-left:12px;padding-left:29px;width:60px;height:26px;line-height:26px;font-weight:bold;font-size:12px;color:#fff;background-position:0 -140px;}
+.addItem:hover{text-decoration:none;color:#fff;background-position:-95px -140px;}
+.btBtn{padding:50px 0 0 85px;}
+.blueBtn, .grayBtn{display:inline-block;width:109px;height:36px;line-height:36px;font-size:16px;color:#fff;text-align:center;background-position:0 -215px;cursor: pointer;}
+/* 表单错误提示 */
+.actionError { text-align: center; font-weight: bold; color: #FF0000; padding-top: 20px; }
+.grayBtn{margin-left:15px;color:#61717c;background-position:0 -175px;}
+.grayBtn:hover{text-decoration:none;color:#61717c;background-position:-115px -175px;}
+.blueBtn:hover{text-decoration:none;color:#fff;background-position:-115px -215px;}
+.infoSection .radioItem{width:120px;margin-top:5px;}
+.pollC{float:left;padding:5px 10px;width:584px;height:94px;line-height:18px;font-size:12px;overflow:auto;border:1px solid #ddd;box-shadow:1px 1px 2px #f0f0f0 inset;}
+.infoSection .lNum{display:inline-block;width:20px;padding-right:5px;height:28px;line-height:28px;}
+.location p{margin-bottom:15px;}
+.del{display:inline-block;margin:7px 0 0 10px;width:14px;height:14px;background-position:1px -88px;}
+.del:hover{background-position:-19px -88px;}
+/*活动详情*/
+.line{height:0;overflow:hidden;padding-bottom:10px;border-bottom:1px solid #efefef;}
+.colsWrap2{background:#fff url(../images/rbg297.gif) repeat-y right top;}
+.detailBox{padding:30px 15px 45px 17px;width:666px;}
+.rightBox{padding:14px 18px 40px;width:262px;overflow:hidden;}
+.pSection{padding-bottom:12px;height:50px;border-bottom:1px solid #dbdbdb;}
+.headPic{display:block;width:50px;height:50px;}
+.pIntro{padding-left:20px;line-height:24px;}
+.pIntro a{color:#017fd2;}
+.pIntro h3, .pIntro h3 a{font-size:14px;}
+.pIntro h3 span{margin-left:6px;font-size:14px;font-weight:normal;}
+.pIntro p a{margin-right:16px;}
+.createBtn{display:inline-block;margin-top:12px;width:129px;height:38px;line-height:38px;text-align:center;font-size:16px;color:#fff;font-weight:bold;background-position:0 -45px;}
+.createBtn:hover{color:#fff;text-decoration:none;background-position:0 -90px;}
+.pollCont{margin-top:25px;line-height:24px;}
+.topCont{margin-bottom:8px;}
+.pollCont h2{font-size:16px;color:#333;}
+.pollTime{font-size:12px;color:#999;line-height:20px;}
+.pollTime span{margin-left:10px;color:#666;}
+.peopleNum{width:80px;height:40px;text-align:center;font-size:12px;border:1px solid #dfeff8;border-radius:2px;-moz-border-radius:2px;background:#dfeff8;}
+.peopleNum span{display:block;height:23px;line-height:23px;}
+.peopleNum .number{height:17px;line-height:17px;color:#999;background:#fff;}
+.options{padding-top:8px;}
+.options li{margin-top:12px;height:24px;overflow:hidden;zoom:1;vertical-align:top;}
+.options .radioItem{width:370px;}
+.perBox{display:inline-block;width:150px;height:15px;overflow:hidden;vertical-align:middle; background-color: #E3E3E3;}
+.perBox .perBg{display:block;height:15px;}
+.perBox .perBg1{background:#f3b1b1;}
+.perBox .perBg2{background:#e7b1f3;}
+.perBox .perBg3{background:#b1e1f3;}
+.perBox .perBg4{background:#bff3b1;}
+.pollPer{width:0;overflow:hidden;}
+.pollPer .perN, .pollPer .perNum{display:inline-block;width:50px;font-size:12px;vertical-align:middle; color: #BCBCBC;}
+.pollPer .perNum{width:32px; color: #000;}
+.pollPer b{font-size:12px;color:#999;font-weight:normal;vertical-align:middle;}
+.pollBtn,.disPollBtn{display:inline-block;margin-top:18px;width:109px;height:32px;text-align:center;line-height:32px;color:#fff;font-size:14px;border-radius:2px;-moz-border-radius:2px;background:#5eb6f3;}
+.pollBtn{cursor:pointer;}
+.pollBtn:hover{text-decoration:none;color:#fff;background:#67bdf9;}
+.disPollBtn{color:#999;background:#eaeff2;}
+.allComment{margin-top:20px;}
+.options .voteRadio, .options .voteCheck{margin-right:5px;vertical-align:middle;}
+.rTit{padding:10px 0 5px;line-height:30px;font-size:14px;}
+.moreLink{color:#aaa;text-decoration:underline;font-weight:normal;}
+.emDate{float:right;font-style:normal;color:#888;font-size:13px;}
+.hotSlide{position:relative;width:262px;overflow:hidden;}
+.hotSlideList{height:270px;width:1000px;overflow:hidden;}
+.artSection{width:262px;}
+.artSection li{line-height:27px;font-size:13px;color:#666;}
+.joiners{position:relative;overflow:hidden;width:262px;height:384px;}
+.joiners .readThis{width:1100px;}
+.joinerList{width:275px;}
+.joinerList li{float:left;padding-right:8px;width:60px;height:90px;line-height:22px;text-align:center;}
+.joinerList li a, .joinerList li img{display:block;}
+
+.numSlide{margin-top:10px;text-align:right;}
+.numSlide a{display:inline-block;width:21px;height:20px;line-height:20px;background:#ebf1f4;font-size:13px;color:#666;text-align:center;font-weight:bold;}
+.numSlide a:hover{text-decoration:none;}
+.numSlide a.active{color:#fff;background:#8fccf1;}
+
+.ImgSlide{height:20px;text-align:right;margin-top:5px;}
+.ImgSlide a{display:inline-block;width:21px;height:20px;line-height:200px;overflow:hidden;*float:left;*margin-left:3px;}
+.ImgSlide .ImgSlideNext{background-position:0 -107px;}
+.ImgSlide .ImgSlideNext_on{background-position:0 -127px;}
+.ImgSlide .ImgSlidePrev{background-position:-21px -107px;}
+.ImgSlide .ImgSlidePrev_on{background-position:-21px -127px;}
+.readThisCont{border-bottom:0;}
+/*投票列表*/
+.rNum{margin:0 4px;line-height:28px;font-size:12px;color:#aaa;}
+.pTabNav{margin:0 0 8px;}
+.pTabNav li{position:relative;float:left;margin-right:-1px;width:323px;height:32px;line-height:32px;text-align:center;border:1px solid #e4ebef;background:#f9fcff;}
+.pTabNav li a{display:block;font-size:16px;color:#8b9399;}
+.pTabNav li a:hover{text-decoration:none;}
+.pTabNav .tabOn{border-width:1px;border-style:solid;border-color:#d7e4ea #d7e4ea #e4f2f9 #e4f2f9;}
+.pTabNav .tabOn a{color:#5b7fa0;background:#eaf8ff;}
+.btArr{display:none;position:absolute;left:50%;bottom:-7px;margin-left:-5px;width:10px;height:7px;overflow:hidden;background-position:-25px 0;}
+.pTabNav .tabOn .btArr{display:block;}
+.voteBox{padding:20px 12px 20px 20px;height:80px;border-top:1px solid #fff;border-bottom:1px solid #fff;overflow:hidden;zoom:1;}
+.voteBoxOn{border-top:1px dotted #ddd;border-bottom:1px dotted #ddd;background:#f6fafc;}
+.voteBox dt{width:80px;height:80px;text-align:center;}
+.voteBox dt img{vertical-align:middle;}
+.nullTag{display:inline-block;width:0;height:100%;overflow:hidden;vertical-align:middle;}
+.voteBox dd{position:relative;padding-left:20px;width:534px;}
+.voteBox h4{margin-bottom:20px;}
+.voteBox h4, .voteBox h4 a{line-height:18px;font-size:14px;color:#333;}
+.voteBox h4 a:hover{color:#017fd2;}
+.date{font-size:13px;line-height:22px;}
+.date span{margin-left:5px;color:#888;}
+.infoBox{position:absolute;right:0;bottom:0;}
+.infoBox p{font-size:12px;color:#aaa;line-height:30px;text-align:right;}
+.infoBox p strong{font-size:14px;color:#31628c;}
+.voteBtn{display:inline-block;width:110px;height:38px;line-height:38px;text-align:center;font-size:16px;}
+.partBtn{background-position:-65px -260px;color:#fff;}
+.partBtn:hover{background-position:-180px -260px;color:#fff;text-decoration:none;}
+.viewBtn{background-position:-65px -310px;color:#7ea0bf;}
+.viewBtn:hover{background-position:-180px -310px;color:#7ea0bf;text-decoration:none;}
+.finished{color:#d8d8d8;background:#f3f3f3;}
+.voteBox .trash{display:none;position:absolute;bottom:4px;left:230px;}
+.voteBox .zEdit{display:none;position:absolute;top:0;right:-2px;}
+.noneB{border:none;}
+.none{display:none;}
+div.content {display: none;}
+.redTxt {
+	padding-left: 8px;
+	color: #F00;
+	font-size: 12px;
+}
